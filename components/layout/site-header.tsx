@@ -91,6 +91,24 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
+          <div className="mt-4 flex w-full items-center gap-2 rounded-full border border-black/10 bg-black/5 p-1 text-[11px] font-bold uppercase tracking-wider">
+            <button
+              onClick={() => setLang("en")}
+              className={`flex-1 rounded-full px-3 py-2 transition-all ${
+                lang === "en" ? "bg-white text-black shadow-sm" : "text-black/50 hover:text-black"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLang("mn")}
+              className={`flex-1 rounded-full px-3 py-2 transition-all ${
+                lang === "mn" ? "bg-white text-black shadow-sm" : "text-black/50 hover:text-black"
+              }`}
+            >
+              MN
+            </button>
+          </div>
         </div>
       )}
     </header>
